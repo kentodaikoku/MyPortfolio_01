@@ -52,14 +52,16 @@ html body {
 /* MAIN STYLE */
 #main {
   width: 100%;
-  margin: 100px auto;
+  margin: 100px 10px;
 }
 #main .section {
-  width: 50%;
-  margin: 50px auto;
+  width: 100%;
+  margin: 100px auto;
 }
 #main .section-title {
   text-align: center;
+  font-size: 1.75rem;
+  font-family: fantasy;
 }
 #main #profile .profile-contents {
   display: flex;
@@ -94,6 +96,12 @@ html body {
 #main #profile .profile-contents .profile-right p {
   font-size: 1.75rem;
   font-family: fantasy;
+}
+#main #about {
+  width: 50%;
+}
+#main #history {
+  width: 50%;
 }
 #main #history .history-wrapper dl {
   display: flex;

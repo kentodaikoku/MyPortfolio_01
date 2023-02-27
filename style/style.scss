@@ -76,15 +76,17 @@ html {
 /* MAIN STYLE */
 #main {
   width: 100%;
-  margin: 100px auto;
+  margin: 100px 10px;
 
   .section {
-    width: 50%;
-    margin: 50px auto;
+    width: 100%;
+    margin: 100px auto;
   }
 
   .section-title {
     text-align: center;
+    font-size: 1.75rem;
+    font-family: fantasy;
   }
 
   // PROFILE SECTION
@@ -134,11 +136,14 @@ html {
 
   // ABOUT SECTION
   #about {
-
+    width: 50%;
+    // margin: 100px auto;
   }
 
   // HISTORY SECTION
   #history {
+    width: 50%;
+    // margin: 0 auto;
     & .history-wrapper {
       dl {
         display: flex;
