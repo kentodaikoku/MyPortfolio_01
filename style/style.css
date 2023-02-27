@@ -58,6 +58,11 @@ html body {
   width: 100%;
   box-shadow: 0 5px 8px 4px #ccc;
 }
+#main #profile .profile-contents .profile-img#fadein {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.5s ease;
+}
 #main #profile .profile-contents .profile-right .introduce span {
   display: inline-block;
   transition: all 0.7s ease;

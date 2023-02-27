@@ -5,8 +5,10 @@
 $background: #fffffe;
 $background2: #D2EFF0;
 $text: #2e2e2e;
-$button: #4fc4cf;
+$highlight: #4fc4cf;
 $buttonText: #181818;
+$purple: #994ff3;
+$primary: #f2eef5;
 
 // main {
 //   color: var(--color-primary);
@@ -78,6 +80,12 @@ html {
           width: 100%;
           box-shadow: 0 5px 8px 4px #ccc;
         }
+
+        &#fadein {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 1.5s ease;
+        }
       }
 
       & .profile-right {
@@ -89,7 +97,7 @@ html {
             // transform: translate(30px, -10px);
             // transform: rotateY(360deg);
             transform: translate(0, -30px) perspective(80px)  rotateX(-35deg);
-            color: $button;
+            color: $highlight;
           }
         }
       }
