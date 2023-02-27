@@ -37,9 +37,10 @@ html body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-right: 30px;
 }
 #header .header-contents .header-right ul li {
-  padding: 0 5px;
+  padding: 0 7px;
 }
 #header .header-contents .header-right ul li a:hover {
   opacity: 1;
@@ -121,6 +122,13 @@ html body {
 }
 /* END MAIN STYLE */
 /* FOOTER STYLE */
+#footer {
+  color: #f2eef5;
+  color: #2e2e2e;
+  padding: 15px 30px 15px 0;
+  text-align: right;
+}
+
 /* END FOOTER STYLE */
 /* 
   RESPONSIVE STYLE 

@@ -55,9 +55,10 @@ html {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      padding-right: 30px;
 
       li {
-        padding: 0 5px;
+        padding: 0 7px;
 
         & a:hover {
           opacity: 1;
@@ -179,7 +180,15 @@ html {
 
 
 /* FOOTER STYLE */
-
+#footer {
+  // background-color: $text;
+  // background-color: $primary;
+  color: $primary;
+  color: $text;
+  padding: 15px 30px 15px 0;
+  text-align: right;
+  // height: 100px;
+}
 
 /* END FOOTER STYLE */
 
