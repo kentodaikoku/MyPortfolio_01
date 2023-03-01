@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 :root {
   --color-primary: #191818;
 }
@@ -20,15 +21,17 @@ html body {
 
 /* HEADER STYLE */
 #header {
-  z-index: 1;
-  opacity: 0.85;
-}
-#header .header-contents {
-  width: 100%;
-  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
+  opacity: 0.85;
+  width: 100%;
+  height: 100px;
+}
+#header .header-contents {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +56,7 @@ html body {
 /* MAIN STYLE */
 #main {
   width: 100%;
-  margin: 100px 10px;
+  margin: 0 10px;
 }
 #main .section {
   width: 100%;
@@ -71,6 +74,7 @@ html body {
 }
 #main #profile .profile-contents .profile-img {
   width: calc(40% - 50px);
+  padding-top: 20px;
 }
 #main #profile .profile-contents .profile-img img {
   border-radius: 5px;
@@ -89,6 +93,9 @@ html body {
 #main #profile .profile-contents .profile-right .introduce span.profile-name {
   display: inline-block;
   transition: all 1s ease;
+  font-size: 2.5rem;
+  font-family: "Rubik 80s Fade", cursive;
+  color: #ef4565;
 }
 #main #profile .profile-contents .profile-right .introduce span.profile-name:hover {
   transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
@@ -123,6 +130,27 @@ html body {
   width: 70%;
   -webkit-margin-start: 0;
           margin-inline-start: 0;
+}
+#main #work {
+  width: 80%;
+  margin: 0 auto;
+}
+#main #work .work-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px 20px;
+  flex-wrap: wrap;
+}
+#main #work .work-wrapper .card {
+  width: 25%;
+  padding: 10px 20px;
+  border: solid 1px #2e2e2e;
+  border-radius: 10px;
+}
+#main #work .work-wrapper .card:hover {
+  box-shadow: 5px 8px 15px 3px cadetblue;
 }
 /* END MAIN STYLE */
 /* FOOTER STYLE */
