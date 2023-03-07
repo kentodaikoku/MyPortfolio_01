@@ -238,6 +238,40 @@ html body {
 /* 
   RESPONSIVE STYLE 
  */
+@media screen and (max-width: 1280px) {
+  #main {
+    margin: 0 auto;
+  }
+  #main #profile {
+    width: 90%;
+    margin: 50px auto 100px;
+  }
+  #main #profile .profile-contents {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #main #about {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #main #about .about-p {
+    width: 100%;
+  }
+  #main #history {
+    width: 100%;
+  }
+  #main #history .history-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #main #history .history-wrapper dl dt {
+    width: 40%;
+  }
+  #main #history .history-wrapper dl dd {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 768px) {
   #main {
     margin: 0 auto;

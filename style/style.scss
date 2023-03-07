@@ -322,7 +322,44 @@ html {
   RESPONSIVE STYLE 
  */
 @media screen and (max-width:1280px) {
-  
+  #main {
+    margin: 0 auto;
+
+    #profile {
+      width: 90%;
+      margin: 50px auto 100px;
+      .profile-contents {
+        justify-content: space-between;
+        gap: 20px;
+      }
+    }
+
+    #about {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      & .about-p {
+        width: 100%;
+      }
+    }
+
+    #history {
+      width: 100%;
+      & .history-wrapper {
+        width: 80%;
+        margin: 0 auto;
+
+        dl {
+          dt {
+            width: 40%;
+          }
+          dd {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:768px) {
