@@ -19,6 +19,19 @@ window.setTimeout(() => {
 
 
 // ハンバーガーメニュー
+let menuBar = document.querySelector('.menu-btn');
+let nav = document.getElementById('nav');
+let open = document.querySelector('.open');
+menuBar.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  menuBar.classList.toggle('open');
+});
+
+open.addEventListener('click', () => {
+  // nav.classList.toggle('open');
+  // menuBar.classList.toggle('open');
+  open.classList.toggle('open');
+});
 
 
 
