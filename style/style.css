@@ -162,6 +162,40 @@ html body {
 #main #work .work-wrapper .card:hover {
   box-shadow: 5px 8px 15px 3px cadetblue;
 }
+#main #skill .skill-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#main #skill .skill-wrapper .skill-bar {
+  width: 45%;
+  margin-bottom: 30px;
+}
+#main #skill .skill-wrapper .skill-bar .skill-info {
+  display: flex;
+  justify-content: space-between;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line {
+  margin-top: 5px;
+  position: relative;
+  border: solid 2px #2e2e2e;
+  border-radius: 5px;
+  height: 7px;
+  width: 100%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 7px;
+  width: 70%;
+  background-color: #4fc4cf;
+}
+
 /* END MAIN STYLE */
 /* FOOTER STYLE */
 #footer {

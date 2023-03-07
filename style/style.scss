@@ -222,7 +222,47 @@ html {
 
   // SKILL SECTION
   #skill {
+    & .skill-wrapper {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // gap: 20px 20px;
+      flex-wrap: wrap;
 
+      & .skill-bar {
+        // box-sizing: border-box;
+        width: 45%;
+        margin-bottom: 30px;
+
+        & .skill-info {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        & .skill-line {
+          margin-top: 5px;
+          position: relative;
+          // background-color: gray;
+          border: solid 2px $text;
+          border-radius: 5px;
+          height: 7px;
+          width: 100%;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 7px;
+            width: 70%;     //skillごとの長さ
+            background-color: $highlight;
+          }
+        }
+      }
+
+    }
   }
 }
 /* END MAIN STYLE */
