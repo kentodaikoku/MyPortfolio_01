@@ -192,8 +192,25 @@ html body {
   top: 0;
   left: 0;
   height: 7px;
-  width: 70%;
   background-color: #4fc4cf;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.html::before {
+  width: 80%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.javascript::before {
+  width: 50%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.php::before {
+  width: 80%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.laravel::before {
+  width: 70%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.mysql::before {
+  width: 60%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.wordpress::before {
+  width: 50%;
 }
 
 /* END MAIN STYLE */

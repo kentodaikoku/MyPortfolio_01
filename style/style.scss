@@ -256,12 +256,28 @@ html {
             top: 0;
             left: 0;
             height: 7px;
-            width: 70%;     //skillごとの長さ
             background-color: $highlight;
+          }
+          &.html::before {
+            width: 80%;
+          }
+          &.javascript::before {
+            width: 50%;
+          }
+          &.php::before {
+            width: 80%;
+          }
+          &.laravel::before {
+            width: 70%;
+          }
+          &.mysql::before {
+            width: 60%;
+          }
+          &.wordpress::before {
+            width: 50%;
           }
         }
       }
-
     }
   }
 }
