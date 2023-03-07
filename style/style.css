@@ -212,10 +212,23 @@ html body {
 #main #skill .skill-wrapper .skill-bar .skill-line.wordpress::before {
   width: 50%;
 }
+#main #contact {
+  width: 50%;
+  margin: 0 auto;
+}
+#main #contact .contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main #contact .contact-wrapper a i {
+  font-size: 50px;
+}
 
 /* END MAIN STYLE */
 /* FOOTER STYLE */
 #footer {
+  margin-top: 100px;
   color: #f2eef5;
   color: #2e2e2e;
   padding: 15px 30px 15px 0;

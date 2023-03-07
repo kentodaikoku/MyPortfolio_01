@@ -280,6 +280,24 @@ html {
       }
     }
   }
+
+  // CONTACT SECTION
+  #contact {
+    width: 50%;
+    margin: 0 auto;
+    .contact-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & a {
+        & i {
+          // width: 200px;
+          font-size: 50px;
+        }
+      }
+    }
+  }
 }
 /* END MAIN STYLE */
 
@@ -289,13 +307,13 @@ html {
 #footer {
   // background-color: $text;
   // background-color: $primary;
+  margin-top: 100px;
   color: $primary;
   color: $text;
   padding: 15px 30px 15px 0;
   text-align: right;
   // height: 100px;
 }
-
 /* END FOOTER STYLE */
 
 
