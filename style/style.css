@@ -3,6 +3,15 @@
   --color-primary: #191818;
 }
 
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4fc4cf;
+}
+
 html {
   font-size: 100%;
   background-color: #fffffe;
@@ -145,6 +154,7 @@ html body {
 }
 #main #work .work-wrapper .card {
   width: 25%;
+  height: 150px;
   padding: 10px 20px;
   border: solid 1px #2e2e2e;
   border-radius: 10px;
