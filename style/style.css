@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 :root {
   --color-primary: #191818;
@@ -75,6 +76,7 @@ html body {
   text-align: center;
   font-size: 1.75rem;
   font-family: fantasy;
+  margin-bottom: 50px;
 }
 #main #profile .profile-contents {
   display: flex;
@@ -119,25 +121,57 @@ html body {
 }
 #main #about {
   width: 50%;
+  font-size: 1.1rem;
+}
+#main #about .about-p p {
+  position: relative;
+}
+#main #about .about-p p::before {
+  content: "✔︎";
+  color: #4fc4cf;
+  position: absolute;
+  top: 0;
+  left: -5%;
 }
 #main #history {
-  width: 50%;
+  width: 80%;
+  font-size: 1.1rem;
+}
+#main #history .history-wrapper {
+  width: 100%;
+  margin: 0 auto;
 }
 #main #history .history-wrapper dl {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 #main #history .history-wrapper dl dt, #main #history .history-wrapper dl dd {
-  margin: 10px 0;
+  padding-bottom: 30px;
 }
 #main #history .history-wrapper dl dt {
-  width: 30%;
+  width: 35%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 50px;
+  font-family: "Rubik 80s Fade", cursive;
 }
 #main #history .history-wrapper dl dd {
-  width: 70%;
+  position: relative;
+  box-sizing: border-box;
+  width: 65%;
   -webkit-margin-start: 0;
           margin-inline-start: 0;
+  border-left: solid 2px #4fc4cf;
+  padding-left: 150px;
+}
+#main #history .history-wrapper dl dd::before {
+  content: "●";
+  position: absolute;
+  top: -5%;
+  left: -9px;
+  color: #4fc4cf;
 }
 #main #work {
   width: 80%;
@@ -279,6 +313,9 @@ html body {
   #main .section {
     margin: 50px auto;
   }
+  #main .section-title {
+    margin-top: 80px;
+  }
   #main #profile {
     width: 100%;
     margin: 100px auto 0;
@@ -303,13 +340,36 @@ html body {
   #main #about .about-p {
     width: 80%;
     margin: 0 auto;
+    text-align: left;
   }
   #main #history {
     width: 100%;
   }
-  #main #history .history-wrapper {
-    width: 80%;
-    margin: 0 auto;
+  #main #history .history-wrapper dl {
+    flex-direction: column;
+  }
+  #main #history .history-wrapper dl dt, #main #history .history-wrapper dl dd {
+    width: 100%;
+    padding-left: 20px;
+  }
+  #main #history .history-wrapper dl dt {
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    border-left: solid 2px #4fc4cf;
+  }
+  #main #history .history-wrapper dl dt::before {
+    content: "●";
+    position: absolute;
+    top: -2px;
+    left: -9px;
+    color: #4fc4cf;
+  }
+  #main #history .history-wrapper dl dd:last-child {
+    padding-bottom: 15px;
+  }
+  #main #history .history-wrapper dl dd::before {
+    display: none;
   }
   #main #work {
     width: 100%;

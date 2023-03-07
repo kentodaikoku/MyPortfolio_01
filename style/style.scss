@@ -105,6 +105,7 @@ html {
     text-align: center;
     font-size: 1.75rem;
     font-family: fantasy;
+    margin-bottom: 50px;
   }
 
   // PROFILE SECTION
@@ -164,28 +165,58 @@ html {
   // ABOUT SECTION
   #about {
     width: 50%;
+    font-size: 1.1rem;
     // margin: 100px auto;
+    .about-p {
+      p {
+        position: relative;
+        &::before {
+          content: '✔︎';
+          color: $highlight;
+          position: absolute;
+          top: 0;
+          left: -5%;
+        }
+      }
+    }
   }
 
   // HISTORY SECTION
   #history {
-    width: 50%;
-    // margin: 0 auto;
+    width: 80%;
+    font-size: 1.1rem;
     & .history-wrapper {
+      width: 100%;
+      margin: 0 auto;
       dl {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-
         dt, dd {
-          margin: 10px 0;
+          padding-bottom: 30px;
         }
         dt {
-          width: 30%;
+          width: 35%;
+          margin: 0 auto;
+          box-sizing: border-box;
+          display: inline-block;
+          padding-left: 50px;
+          font-family: 'Rubik 80s Fade', cursive;
         }
         dd {
-          width: 70%;
+          position: relative;
+          box-sizing: border-box;
+          width: 65%;
           margin-inline-start: 0;
+          border-left: solid 2px $highlight;
+          padding-left: 150px;
+          &::before {
+            content: '●';
+            position: absolute;
+            top: -5%;
+            left: -9px;
+            color: $highlight;
+          }
         }
       }
     }
@@ -232,7 +263,6 @@ html {
       flex-wrap: wrap;
 
       & .skill-bar {
-        // box-sizing: border-box;
         width: 45%;
         margin-bottom: 30px;
 
@@ -370,6 +400,10 @@ html {
       margin: 50px auto;
     }
 
+    .section-title {
+      margin-top: 80px;
+    }
+
     #profile {
       width: 100%;
       margin: 100px auto 0;
@@ -396,14 +430,44 @@ html {
       & .about-p {
         width: 80%;
         margin: 0 auto;
+        text-align: left;
       }
     }
 
     #history {
       width: 100%;
       & .history-wrapper {
-        width: 80%;
-        margin: 0 auto;
+        // width: 80%;
+        // margin: 0 auto;
+        dl {
+          flex-direction: column;
+          dt, dd {
+            width: 100%;
+            padding-left: 20px;
+          }
+          dt {
+            position: relative;
+            box-sizing: border-box;
+            padding-bottom: 10px;
+            border-left: solid 2px $highlight;;
+            &::before {
+              content: '●';
+              position: absolute;
+              top: -2px;
+              left: -9px;
+              color: $highlight;
+            }
+          }
+          dd {
+            // border-left: none;
+            &:last-child {
+              padding-bottom: 15px;
+            }
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
     }
 
