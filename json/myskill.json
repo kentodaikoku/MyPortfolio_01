@@ -1,0 +1,32 @@
+[
+  {
+    "name": "HTML/CSS",
+    "level": "80",
+    "class": "html"
+  },
+  {
+    "name": "Javascirpt",
+    "level": "50",
+    "class": "javascript"
+  },
+  {
+    "name": "PHP",
+    "level": "80",
+    "class": "php"
+  },
+  {
+    "name": "Laravel",
+    "level": "70",
+    "class": "laravel"
+  },
+  {
+    "name": "Mysql",
+    "level": "60",
+    "class": "mysql"
+  },
+  {
+    "name": "WordPress",
+    "level": "50",
+    "class": "wordpress"
+  }
+]
