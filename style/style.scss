@@ -119,7 +119,7 @@ html {
         padding-top: 20px;
         img {
           border-radius: 5px;
-          width: 100%;
+          // width: 100%;
           box-shadow: 0 5px 8px 4px #ccc;
           width: 90%;
         }
@@ -321,3 +321,79 @@ html {
 /* 
   RESPONSIVE STYLE 
  */
+@media screen and (max-width:1280px) {
+  
+}
+
+@media screen and (max-width:768px) {
+  #main {
+    margin: 0 auto;
+
+    .section {
+      margin: 50px auto;
+    }
+
+    #profile {
+      width: 100%;
+      margin: 100px auto 0;
+      & .profile-contents {
+        flex-direction: column;
+
+        & .profile-img {
+          width: calc(80% - 50px);
+          margin-bottom: 30px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      & .profile-right {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    #about {
+      width: 100%;
+      & .about-p {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    #history {
+      width: 100%;
+      & .history-wrapper {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    #work {
+      width: 100%;
+      & .work-wrapper {
+        flex-direction: column;
+        & .card {
+          width: 50%;
+        }
+      }
+    }
+
+    #skill {
+      width: 100%;
+      & .skill-wrapper {
+        width: 100%;
+        flex-direction: column;
+
+        & .skill-bar {
+          width: 80%;
+        }
+      }
+    }
+
+    #contact {
+      width: 80%;
+    }
+  }
+}

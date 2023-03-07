@@ -87,7 +87,6 @@ html body {
 }
 #main #profile .profile-contents .profile-img img {
   border-radius: 5px;
-  width: 100%;
   box-shadow: 0 5px 8px 4px #ccc;
   width: 90%;
 }
@@ -238,4 +237,66 @@ html body {
 /* END FOOTER STYLE */
 /* 
   RESPONSIVE STYLE 
- *//*# sourceMappingURL=style.css.map */
+ */
+@media screen and (max-width: 768px) {
+  #main {
+    margin: 0 auto;
+  }
+  #main .section {
+    margin: 50px auto;
+  }
+  #main #profile {
+    width: 100%;
+    margin: 100px auto 0;
+  }
+  #main #profile .profile-contents {
+    flex-direction: column;
+  }
+  #main #profile .profile-contents .profile-img {
+    width: calc(80% - 50px);
+    margin-bottom: 30px;
+  }
+  #main #profile .profile-contents .profile-img img {
+    width: 100%;
+  }
+  #main #profile .profile-right {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #main #about {
+    width: 100%;
+  }
+  #main #about .about-p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #main #history {
+    width: 100%;
+  }
+  #main #history .history-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #main #work {
+    width: 100%;
+  }
+  #main #work .work-wrapper {
+    flex-direction: column;
+  }
+  #main #work .work-wrapper .card {
+    width: 50%;
+  }
+  #main #skill {
+    width: 100%;
+  }
+  #main #skill .skill-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  #main #skill .skill-wrapper .skill-bar {
+    width: 80%;
+  }
+  #main #contact {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */
