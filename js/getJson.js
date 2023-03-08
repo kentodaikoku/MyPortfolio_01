@@ -1,4 +1,5 @@
-var url = "/json/myskill.json";
+let url = "../json/myskill.json";
+// let url = "http://kentodaikoku.html.xdomain.jp/portfolio/json/myskill.json";
 
 window.addEventListener('load', ()=> {
   fetch(url).then(response => response.json()).then(data => getSkillJson(data));
