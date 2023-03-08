@@ -289,6 +289,12 @@ html body {
 #main #skill .skill-wrapper .skill-bar .skill-line.wordpress::before {
   width: 50%;
 }
+#main #skill .skill-wrapper .skill-bar .skill-line.linux::before {
+  width: 50%;
+}
+#main #skill .skill-wrapper .skill-bar .skill-line.git::before {
+  width: 55%;
+}
 #main #contact {
   width: 50%;
   margin: 0 auto;

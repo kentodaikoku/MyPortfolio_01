@@ -28,5 +28,15 @@
     "name": "WordPress",
     "level": "50",
     "class": "wordpress"
+  },
+  {
+    "name": "Linux",
+    "level": "50",
+    "class": "linux"
+  },
+  {
+    "name": "Git",
+    "level": "55",
+    "class": "git"
   }
 ]

@@ -357,6 +357,12 @@ html {
           &.wordpress::before {
             width: 50%;
           }
+          &.linux::before {
+            width: 50%;
+          }
+          &.git::before {
+            width: 55%;
+          }
         }
       }
     }
