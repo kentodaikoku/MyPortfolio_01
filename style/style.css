@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 :root {
   --color-primary: #191818;
 }
@@ -9,12 +11,17 @@
   width: 10px;
 }
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: #4fc4cf;
 }
 
 html {
   font-size: 100%;
+  font-family: "Noto Sans JP", sans-serif;
   background-color: #fffffe;
 }
 html li {
@@ -120,6 +127,7 @@ html body {
   text-align: center;
   font-size: 1.75rem;
   font-family: fantasy;
+  font-style: italic;
   margin-bottom: 50px;
 }
 #main #profile .profile-contents {
@@ -149,6 +157,7 @@ html body {
   transition: all 1s ease;
   font-size: 2.5rem;
   font-family: "Rubik 80s Fade", cursive;
+  font-style: italic;
   color: #ef4565;
 }
 #main #profile .profile-contents .profile-right .introduce span.profile-name:hover {
@@ -200,6 +209,7 @@ html body {
   display: inline-block;
   padding-left: 50px;
   font-family: "Rubik 80s Fade", cursive;
+  font-style: italic;
 }
 #main #history .history-wrapper dl dd {
   position: relative;
@@ -334,6 +344,9 @@ html body {
     justify-content: space-between;
     gap: 20px;
   }
+  #main #profile .profile-contents .profile-right .introduce span.profile-name {
+    font-family: "Work Sans", sans-serif;
+  }
   #main #about {
     width: 100%;
     margin: 0 auto;
@@ -351,6 +364,7 @@ html body {
   }
   #main #history .history-wrapper dl dt {
     width: 40%;
+    font-family: "Work Sans", sans-serif;
   }
   #main #history .history-wrapper dl dd {
     width: 60%;
@@ -372,17 +386,30 @@ html body {
   }
   #main #profile .profile-contents {
     flex-direction: column;
+    gap: 5px;
   }
   #main #profile .profile-contents .profile-img {
-    width: calc(80% - 50px);
+    width: calc(70% - 50px);
     margin-bottom: 30px;
   }
   #main #profile .profile-contents .profile-img img {
     width: 100%;
   }
-  #main #profile .profile-right {
+  #main #profile .profile-contents .profile-right {
     width: 80%;
     margin: 0 auto;
+  }
+  #main #profile .profile-contents .profile-right .introduce {
+    width: calc(90% - 10px);
+    font-size: 1.5rem;
+  }
+  #main #profile .profile-contents .profile-right .introduce span.profile-name {
+    font-family: "Work Sans", sans-serif;
+    font-size: 2rem;
+    padding: 5px 0;
+  }
+  #main #profile .profile-contents .profile-right p {
+    font-style: oblique;
   }
   #main #about {
     width: 100%;
@@ -407,12 +434,13 @@ html body {
     box-sizing: border-box;
     padding-bottom: 10px;
     border-left: solid 2px #4fc4cf;
+    font-family: "Work Sans", sans-serif;
   }
   #main #history .history-wrapper dl dt::before {
     content: "●";
     position: absolute;
     top: -2px;
-    left: -9px;
+    left: -11px;
     color: #4fc4cf;
   }
   #main #history .history-wrapper dl dd:last-child {
