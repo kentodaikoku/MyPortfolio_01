@@ -2,10 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-:root {
-  --color-primary: #191818;
-}
-
 ::-webkit-scrollbar {
   height: 10px;
   width: 10px;
@@ -88,7 +84,7 @@ html body {
   position: fixed;
   top: 0;
   left: -300px;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   opacity: 0;
 }
 #header .header-contents .header-right #nav.open {
@@ -122,8 +118,17 @@ html body {
 #main .section {
   width: 100%;
   margin: 100px auto;
+  transform: tranlateY(50px);
+  transition: all 1s ease;
 }
-#main .section-title {
+#main .section.fade-in {
+  opacity: 0;
+}
+#main .section.fade-in.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+#main .section .section-title {
   text-align: center;
   font-size: 1.75rem;
   font-family: fantasy;
@@ -369,8 +374,14 @@ html body {
   #main #history .history-wrapper dl dd {
     width: 60%;
   }
+  #main #work .work-wrapper .card:active {
+    box-shadow: 5px 8px 15px 3px cadetblue;
+  }
 }
 @media screen and (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
   #main {
     margin: 0 auto;
   }
@@ -382,7 +393,7 @@ html body {
   }
   #main #profile {
     width: 100%;
-    margin: 100px auto 0;
+    margin: 70px auto 0;
   }
   #main #profile .profile-contents {
     flex-direction: column;
@@ -401,11 +412,11 @@ html body {
   }
   #main #profile .profile-contents .profile-right .introduce {
     width: calc(90% - 10px);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   #main #profile .profile-contents .profile-right .introduce span.profile-name {
     font-family: "Work Sans", sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 5px 0;
   }
   #main #profile .profile-contents .profile-right p {

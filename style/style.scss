@@ -11,9 +11,9 @@ $buttonText: #181818;
 $purple: #994ff3;
 $primary: #f2eef5;
 
-:root {
-  --color-primary: #191818;
-}
+// :root {
+//   --color-primary: #191818;
+// }
 
 ::-webkit-scrollbar {
   height: 10px;
@@ -109,7 +109,7 @@ html {
         position: fixed;
         top: 0;
         left: -300px;
-        transition: all 0.5s ease;
+        transition: all 0.8s ease;
         opacity: 0;
         &.open {
           background-color: #2e2e2e;
@@ -150,15 +150,27 @@ html {
   .section {
     width: 100%;
     margin: 100px auto;
+    transform: tranlateY(50px);
+    transition: all 1s ease;
+    // transition-duration: 0.5s;
+    // transition-property: opacity, transform;
+    &.fade-in {
+      opacity: 0;
+      &.scroll-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    & .section-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-family: fantasy;
+      font-style: italic;
+      margin-bottom: 50px;
+    }
   }
 
-  .section-title {
-    text-align: center;
-    font-size: 1.75rem;
-    font-family: fantasy;
-    font-style: italic;
-    margin-bottom: 50px;
-  }
 
   // PROFILE SECTION
   #profile {
@@ -454,10 +466,24 @@ html {
         }
       }
     }
+
+    #work {
+      & .work-wrapper {
+        & .card {
+          &:active {
+            box-shadow: 5px 8px 15px 3px cadetblue
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width:768px) {
+  #header {
+    height: 80px;
+  }
+
   #main {
     margin: 0 auto;
 
@@ -471,7 +497,7 @@ html {
 
     #profile {
       width: 100%;
-      margin: 100px auto 0;
+      margin: 70px auto 0;
       & .profile-contents {
         flex-direction: column;
         gap: 5px;
@@ -487,10 +513,10 @@ html {
           margin: 0 auto;
           & .introduce {
             width: calc(90% - 10px);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             span.profile-name {
               font-family: 'Work Sans', sans-serif;
-              font-size: 2rem;
+              font-size: 2.2rem;
               padding: 5px 0;
             }
           }

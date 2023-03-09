@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+	margin: 0;
+}
+.content_body {
+	width: 300px;
+	height: 500px;
+	background: lightgrey;
+	position: relative;
+}
+.content_body header {
+	position: relative;
+	background-color: black;
+	color: white;
+	z-index: 1;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+}
+.content_body header div {
+	height: fit-content;
+}
+.content_body h1 {
+	font-size: 1rem;
+}
+.content_body section {
+	height: 420px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+.sample_sp_menu {
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: -300px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	color: white;
+	text-align: center;
+	transition: .5s;
+}
+.sample_sp_menu ul {
+	padding-inline: 0;
+}
+.sample_sp_menu li {
+	list-style: none;
+	margin-top: 1.5rem;
+	cursor: pointer;
+}
+</style>
+<body>
+  <div class="content_body">
+		<header>
+			<div class="header_container">
+				<div class="menu_container">
+					<img class="menu_open" src="img/ham-menu-image01.png">
+					<img class="menu_close" src="img/ham-menu-image02.png">    
+				</div>
+				<h1>サイトタイトル</h1>
+			</div>
+		</header>
+		<nav class="sample_sp_menu">
+			<ul>
+				<li>HOME</li>
+				<li>ABOUT</li>
+				<li>NEWS</li>
+				<li>CONTACT</li>
+			</ul>
+		</nav>
+		<section>
+			<div>
+				<p>ここにキャッチコピーが入ります。</p>   
+			</div>
+		</section>
+	</div>
+</body>
+</html>
