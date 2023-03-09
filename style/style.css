@@ -181,6 +181,10 @@ html body {
   width: 50%;
   font-size: 1.1rem;
 }
+#main #about .about-p {
+  width: 600px;
+  margin: 0 auto;
+}
 #main #about .about-p p {
   position: relative;
 }
@@ -322,6 +326,20 @@ html body {
 #main #contact .contact-wrapper a i {
   font-size: 50px;
 }
+#main #contact .contact-wrapper a i:hover {
+  font-weight: bold;
+}
+#main #thanks {
+  margin-top: 150px;
+}
+#main #thanks .thanks-wrapper {
+  text-align: center;
+}
+#main #thanks .thanks-wrapper p {
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-style: italic;
+}
 
 /* END MAIN STYLE */
 /* FOOTER STYLE */
@@ -430,6 +448,9 @@ html body {
     margin: 0 auto;
     text-align: left;
   }
+  #main #about .about-p p::before {
+    left: -6%;
+  }
   #main #history {
     width: 100%;
   }
@@ -481,5 +502,16 @@ html body {
   }
   #main #contact {
     width: 80%;
+  }
+  #main #thanks {
+    margin-top: 100px;
+  }
+  #main #thanks .thanks-wrapper {
+    text-align: center;
+  }
+  #main #thanks .thanks-wrapper p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-style: italic;
   }
 }/*# sourceMappingURL=style.css.map */

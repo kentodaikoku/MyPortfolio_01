@@ -184,7 +184,6 @@ html {
         padding-top: 20px;
         img {
           border-radius: 5px;
-          // width: 100%;
           box-shadow: 0 5px 8px 4px #ccc;
           width: 90%;
         }
@@ -231,8 +230,10 @@ html {
   #about {
     width: 50%;
     font-size: 1.1rem;
-    // margin: 100px auto;
     .about-p {
+      width: 600px;
+      // width: 100%;
+      margin: 0 auto;
       p {
         position: relative;
         &::before {
@@ -390,12 +391,27 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       & a {
         & i {
           // width: 200px;
           font-size: 50px;
+          &:hover {
+            font-weight: bold;
+          }
         }
+      }
+    }
+  }
+
+  #thanks {
+    // width: 50%;
+    margin-top: 150px;
+    .thanks-wrapper {
+      text-align: center;
+      p {
+        font-size: 2.25rem;
+        font-weight: bold;
+        font-style: italic;
       }
     }
   }
@@ -533,6 +549,11 @@ html {
         width: 80%;
         margin: 0 auto;
         text-align: left;
+        p {
+          &::before {
+            left: -6%;
+          }
+        }
       }
     }
 
@@ -595,6 +616,18 @@ html {
 
     #contact {
       width: 80%;
+    }
+
+    #thanks {
+      margin-top: 100px;
+      .thanks-wrapper {
+        text-align: center;
+        p {
+          font-size: 1.8rem;
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
     }
   }
 }

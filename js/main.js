@@ -22,6 +22,7 @@ menuBar.addEventListener('click', () => {
   menuBar.classList.toggle('open');
 });
 
+
 // スクロール表示
 let fadeInTarget = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', () => {
