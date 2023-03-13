@@ -65,6 +65,24 @@ html {
     align-items: center;
 
     & .header-right {
+      display: flex;
+      justify-content: space-between;
+
+      & .lang-link {
+        width: 50px;
+        height: 50px;
+        padding-top: 10px;
+        padding-right: 20px;
+        a {
+          font-size: 1.25rem;
+          font-style: italic;
+          &:hover {
+            font-weight: bold;
+            color: $highlight;
+          }
+        }
+      }
+
       & .menu-btn {
         width: 50px;
         height: 50px;

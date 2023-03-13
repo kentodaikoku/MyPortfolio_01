@@ -48,6 +48,24 @@ html body {
   justify-content: space-between;
   align-items: center;
 }
+#header .header-contents .header-right {
+  display: flex;
+  justify-content: space-between;
+}
+#header .header-contents .header-right .lang-link {
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+#header .header-contents .header-right .lang-link a {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+#header .header-contents .header-right .lang-link a:hover {
+  font-weight: bold;
+  color: #4fc4cf;
+}
 #header .header-contents .header-right .menu-btn {
   width: 50px;
   height: 50px;
