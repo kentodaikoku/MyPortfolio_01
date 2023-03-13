@@ -23,15 +23,14 @@ menuBar.addEventListener('click', () => {
 
 
 // スムーススクロール
-let menuLink = document.querySelectorAll('a[href^="#"]');
+let menuLink = document.querySelectorAll('.menu-link');
 menuLink.forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     e.preventDefault();
     
     const href = anchor.getAttribute('href');
-    const linkTarget = document.querySelector(href);
+    const linkTarget = document.getElementById(href.replace('#', ''));
     const linkPosition = linkTarget.getBoundingClientRect().top + window.scrollY - 50;
-    // console.log(linkPosition);
 
     // ナビバー閉じる
     nav.classList.toggle('open');
@@ -63,8 +62,16 @@ window.addEventListener('scroll', () => {
 
 
 
-// 英語版表示？
-
-
-
 // ナイトモード処理？
+let modeBtn = document.querySelector('.mode > a');
+const body = document.querySelector('body');
+modeBtn.addEventListener('click', () => {
+  body.classList.toggle('night');
+  modeIcon = modeBtn.querySelector('i');
+
+  if (modeIcon.classList.contains('fa-sun')) {
+    modeBtn.innerHTML = '<i class="fa-solid fa-moon">';
+  } else {
+    modeBtn.innerHTML = '<i class="fa-regular fa-sun" style="color:#fde24f;"></i>';
+  }
+});

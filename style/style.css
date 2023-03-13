@@ -18,7 +18,6 @@
 html {
   font-size: 100%;
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #fffffe;
 }
 html li {
   list-style: none;
@@ -29,9 +28,32 @@ html a {
 }
 html body {
   width: 100%;
+  background-color: #fffffe;
   color: #2e2e2e;
 }
 
+/* NIGHT MODE SECTION*/
+.night {
+  background-color: rgb(17, 16, 16);
+  color: #f2eef5;
+}
+.night a {
+  color: #f2eef5;
+}
+.night #header .header-contents > .header-right > .menu-btn span {
+  border: solid 1px #f2eef5;
+}
+.night #main #work .work-wrapper > .card {
+  border: solid 1px #f2eef5;
+}
+.night #main #skill .skill-wrapper > .skill-bar > .skill-line {
+  border: solid 2px #4fc4cf;
+}
+.night #footer {
+  color: #f2eef5;
+}
+
+/* END NIGHT MODE SECTION */
 /* HEADER STYLE */
 #header {
   position: fixed;
@@ -51,6 +73,13 @@ html body {
 #header .header-contents .header-right {
   display: flex;
   justify-content: space-between;
+}
+#header .header-contents .header-right .mode {
+  width: 50px;
+  padding-top: 10px;
+}
+#header .header-contents .header-right .mode a i {
+  font-size: 1.5rem;
 }
 #header .header-contents .header-right .lang-link {
   width: 50px;
@@ -99,32 +128,31 @@ html body {
   transform: translateY(-8px) rotate(45deg);
 }
 #header .header-contents .header-right #nav {
+  width: 100%;
   position: fixed;
   top: 0;
-  left: -300px;
-  transition: all 0.8s ease;
-  opacity: 0;
+  bottom: 0;
+  left: -100%;
+  transition: all 0.5s ease;
 }
-#header .header-contents .header-right #nav.open {
-  background-color: #2e2e2e;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: 10;
-}
-#header .header-contents .header-right #nav.open ul li {
+#header .header-contents .header-right #nav ul li {
   padding: 30px;
   font-size: 1.5rem;
 }
-#header .header-contents .header-right #nav.open ul li a {
+#header .header-contents .header-right #nav ul li a {
   color: white;
 }
-#header .header-contents .header-right #nav.open ul li a:hover {
+#header .header-contents .header-right #nav ul li a:hover {
   opacity: 1;
   color: #4fc4cf;
   font-size: 1.75rem;
   font-weight: bolder;
+}
+#header .header-contents .header-right #nav.open {
+  background-color: #2e2e2e;
+  left: 0;
+  opacity: 0.8;
+  z-index: 10;
 }
 
 /* END HEADER STYLE */
@@ -286,14 +314,14 @@ html body {
 }
 #main #skill .skill-wrapper .skill-bar {
   width: 45%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 #main #skill .skill-wrapper .skill-bar .skill-info {
   display: flex;
   justify-content: space-between;
 }
 #main #skill .skill-wrapper .skill-bar .skill-line {
-  margin-top: 5px;
+  margin-top: 10px;
   position: relative;
   border: solid 2px #2e2e2e;
   border-radius: 5px;
@@ -363,7 +391,6 @@ html body {
 /* FOOTER STYLE */
 #footer {
   margin-top: 100px;
-  color: #f2eef5;
   color: #2e2e2e;
   padding: 15px 30px 15px 0;
   text-align: right;
@@ -391,10 +418,10 @@ html body {
   #main #about {
     width: 100%;
     margin: 0 auto;
-    text-align: center;
   }
   #main #about .about-p {
-    width: 100%;
+    padding-left: 150px;
+    text-align: left;
   }
   #main #history {
     width: 100%;
@@ -409,6 +436,9 @@ html body {
   }
   #main #history .history-wrapper dl dd {
     width: 60%;
+  }
+  #main #work .work-wrapper .card {
+    width: 30%;
   }
   #main #work .work-wrapper .card:active {
     box-shadow: 5px 8px 15px 3px cadetblue;
@@ -465,6 +495,7 @@ html body {
     width: 80%;
     margin: 0 auto;
     text-align: left;
+    padding-left: 0;
   }
   #main #about .about-p p::before {
     left: -6%;
@@ -517,6 +548,7 @@ html body {
   }
   #main #skill .skill-wrapper .skill-bar {
     width: 80%;
+    margin-bottom: 30px;
   }
   #main #contact {
     width: 80%;

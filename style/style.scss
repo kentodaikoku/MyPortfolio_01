@@ -30,7 +30,6 @@ $primary: #f2eef5;
 html {
   font-size: 100%;
   font-family: 'Noto Sans JP', sans-serif;
-  background-color: $background;
 
   li {
     list-style: none;
@@ -43,9 +42,45 @@ html {
 
   body {
     width: 100%;
+    background-color: $background;
     color: $text;
   }
 }
+
+/* NIGHT MODE SECTION*/
+.night {
+  background-color: rgb(17, 16, 16);
+  color: $primary;
+
+  a {
+    color: $primary;
+  }
+  
+  #header {
+    & .header-contents > .header-right > .menu-btn {
+      & span {
+        border: solid 1px $primary;
+      }
+    }
+  }
+  #main {
+    #work {
+      & .work-wrapper > .card {
+        border: solid 1px $primary;
+      }
+    }
+    #skill {
+      & .skill-wrapper > .skill-bar > .skill-line {
+        border: solid 2px $highlight;
+      }
+    }
+  }
+  #footer {
+    color: $primary;
+  }
+}
+/* END NIGHT MODE SECTION */
+
 
 
 /* HEADER STYLE */
@@ -67,6 +102,16 @@ html {
     & .header-right {
       display: flex;
       justify-content: space-between;
+
+      & .mode {
+        width: 50px;
+        padding-top: 10px;
+        a {
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
 
       & .lang-link {
         width: 50px;
@@ -121,33 +166,34 @@ html {
       }
 
       & #nav {
+        width: 100%;
+        // height: 100%;
         position: fixed;
         top: 0;
-        left: -300px;
-        transition: all 0.8s ease;
-        opacity: 0;
-        &.open {
-          background-color: #2e2e2e;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0.8;
-          z-index: 10;
-          ul {
-            li {
-              padding: 30px;
-              font-size: 1.5rem;
-              a {
-                color: white;
-                &:hover {
-                  opacity: 1;
-                  color: $highlight;
-                  font-size: 1.75rem;
-                  font-weight: bolder;
-                }
+        bottom: 0;
+        left: -100%;
+        transition: all 0.5s ease;
+        // opacity: 0;
+        ul {
+          li {
+            padding: 30px;
+            font-size: 1.5rem;
+            a {
+              color: white;
+              &:hover {
+                opacity: 1;
+                color: $highlight;
+                font-size: 1.75rem;
+                font-weight: bolder;
               }
             }
           }
+        }
+        &.open {
+          background-color: #2e2e2e;
+          left: 0;
+          opacity: 0.8;
+          z-index: 10;
         }
       }
     }
@@ -224,11 +270,11 @@ html {
             &:hover {
               // transform: translate(30px, -10px);
               // transform: rotateY(360deg);
-              transform: translate(0, -30px) perspective(80px)  rotateX(-35deg);
+              transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
               color: $highlight;
             }
             &.onload {
-              transform: translate(0, -30px) perspective(80px)  rotateX(-35deg);
+              transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
               color: $highlight;
             }
           }
@@ -345,7 +391,7 @@ html {
 
       & .skill-bar {
         width: 45%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         & .skill-info {
           display: flex;
@@ -353,9 +399,8 @@ html {
         }
         
         & .skill-line {
-          margin-top: 5px;
+          margin-top: 10px;
           position: relative;
-          // background-color: gray;
           border: solid 2px $text;
           border-radius: 5px;
           height: 7px;
@@ -408,7 +453,6 @@ html {
       align-items: center;
       & a {
         & i {
-          // width: 200px;
           font-size: 50px;
           &:hover {
             font-weight: bold;
@@ -438,7 +482,6 @@ html {
 /* FOOTER STYLE */
 #footer {
   margin-top: 100px;
-  color: $primary;
   color: $text;
   padding: 15px 30px 15px 0;
   text-align: right;
@@ -474,9 +517,10 @@ html {
     #about {
       width: 100%;
       margin: 0 auto;
-      text-align: center;
+      // text-align: center;
       & .about-p {
-        width: 100%;
+        padding-left: 150px;
+        text-align: left;
       }
     }
 
@@ -501,6 +545,7 @@ html {
     #work {
       & .work-wrapper {
         & .card {
+          width: 30%;
           &:active {
             box-shadow: 5px 8px 15px 3px cadetblue
           }
@@ -564,6 +609,7 @@ html {
         width: 80%;
         margin: 0 auto;
         text-align: left;
+        padding-left: 0;
         p {
           &::before {
             left: -6%;
@@ -625,6 +671,7 @@ html {
 
         & .skill-bar {
           width: 80%;
+          margin-bottom: 30px;
         }
       }
     }
