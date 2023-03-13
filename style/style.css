@@ -118,10 +118,10 @@ html body {
 #main .section {
   width: 100%;
   margin: 100px auto;
-  transform: tranlateY(50px);
-  transition: all 1s ease;
 }
 #main .section.fade-in {
+  transform: tranlateY(50px);
+  transition: all 1s ease;
   opacity: 0;
 }
 #main .section.fade-in.scroll-in {

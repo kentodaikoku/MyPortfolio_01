@@ -6,12 +6,11 @@ window.onload = () => {
 
   let profileName = document.querySelector('.profile-name');
   profileName.classList.toggle('onload');
-};
 
-window.setTimeout(() => {
-  let profileName = document.querySelector('.profile-name');
-  profileName.classList.toggle('onload');
-}, 2000);
+  window.setTimeout(() => {
+    profileName.classList.toggle('onload');
+  }, 2000);
+};
 
 
 // ハンバーガーメニュー
@@ -23,6 +22,30 @@ menuBar.addEventListener('click', () => {
 });
 
 
+// スムーススクロール
+let menuLink = document.querySelectorAll('a[href^="#"]');
+menuLink.forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const href = anchor.getAttribute('href');
+    const linkTarget = document.querySelector(href);
+    const linkPosition = linkTarget.getBoundingClientRect().top + window.scrollY - 50;
+    // console.log(linkPosition);
+
+    // ナビバー閉じる
+    nav.classList.toggle('open');
+    menuBar.classList.toggle('open');
+
+    window.scrollTo({
+      top: linkPosition,
+      behavior: 'smooth',
+    });
+  });
+});
+
+
+
 // スクロール表示
 let fadeInTarget = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', () => {
@@ -31,6 +54,7 @@ window.addEventListener('scroll', () => {
     const scroll = window.scrollY || document.documentElement.scrollTop;
     const offset = rect + scroll;
     const windowHeight = window.innerHeight;
+
     if (scroll > offset - windowHeight + 150) {
       fadeInTarget[i].classList.add('scroll-in');
     }
