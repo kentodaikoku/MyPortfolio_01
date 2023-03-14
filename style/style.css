@@ -34,7 +34,7 @@ html body {
 
 /* NIGHT MODE SECTION*/
 .night {
-  background-color: rgb(17, 16, 16);
+  background-color: rgba(17, 16, 16, 0.899);
   color: #f2eef5;
 }
 .night a {
@@ -386,6 +386,31 @@ html body {
   font-weight: bold;
   font-style: italic;
 }
+#main .scene .pic-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+#main .scene .pic-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f4cee0, #ecccee, #d8cdfc, #b9d1ff, #8fd7ff, #5cdcff, #25dff0, #25dfd0);
+  border-radius: 5px;
+  opacity: 0.8;
+  z-index: -10;
+}
+#main .scene .pic-wrapper img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px #ccc;
+}
+#main .scene .pic-wrapper img:hover {
+  box-shadow: 0 5px 15px 4px #4fc4cf;
+}
 
 /* END MAIN STYLE */
 /* FOOTER STYLE */
@@ -563,5 +588,12 @@ html body {
     font-size: 1.8rem;
     font-weight: bold;
     font-style: italic;
+  }
+  #main .scene .pic-wrapper {
+    width: 75%;
+  }
+  #main .scene .pic-wrapper::before {
+    top: -20px;
+    right: -20px;
   }
 }/*# sourceMappingURL=style.css.map */
