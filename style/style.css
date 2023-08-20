@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@keyframes profile-name {
+  50% {
+    color: #4fc4cf;
+    transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
+  }
+  100% {
+    color: #ef4565;
+    transform: translate(0);
+  }
+}
 ::-webkit-scrollbar {
   height: 10px;
   width: 10px;
@@ -210,14 +220,10 @@ html body {
   font-family: "Rubik 80s Fade", cursive;
   font-style: italic;
   color: #ef4565;
-}
-#main #profile .profile-contents .profile-right .introduce span.profile-name:hover {
-  transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
-  color: #4fc4cf;
-}
-#main #profile .profile-contents .profile-right .introduce span.profile-name.onload {
-  transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
-  color: #4fc4cf;
+  position: relative;
+  animation-name: profile-name;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 #main #profile .profile-contents .profile-right p {
   font-size: 1.75rem;
@@ -270,8 +276,7 @@ html body {
   position: relative;
   box-sizing: border-box;
   width: 65%;
-  -webkit-margin-start: 0;
-          margin-inline-start: 0;
+  margin-inline-start: 0;
   border-left: solid 2px #4fc4cf;
   padding-left: 150px;
 }

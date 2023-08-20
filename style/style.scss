@@ -9,6 +9,15 @@ $highlight: #4fc4cf;
 $buttonText: #181818;
 $purple: #994ff3;
 $primary: #f2eef5;
+$profile-name: #ef4565;
+
+@keyframes profile-name {
+  // from {transform: translate(0) perspective(0) rotateX('0deg');}
+  // to {transform: translate(0, -30px) perspective(80px) rotateX('-35deg');}
+  // 25% { top: -10px;}
+  50% { color: $highlight; transform:translate(0, -30px) perspective(80px) rotateX(-35deg);}
+  100% { color: $profile-name; transform: translate(0); }
+}
 
 // :root {
   // --color-primary: #191818;
@@ -265,18 +274,23 @@ html {
             font-size: 2.5rem;
             font-family: 'Rubik 80s Fade', cursive;
             font-style: italic;
-            color: #ef4565;
+            color: $profile-name;
             // color: #ff5470;
-            &:hover {
+            position: relative;
+            animation-name: profile-name;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            // &:hover {
               // transform: translate(30px, -10px);
               // transform: rotateY(360deg);
-              transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
-              color: $highlight;
-            }
-            &.onload {
-              transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
-              color: $highlight;
-            }
+
+              // transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
+              // color: $highlight;
+            // }
+            // &.onload {
+              // transform: translate(0, -30px) perspective(80px) rotateX(-35deg);
+              // color: $highlight;
+            // }
           }
         } 
         & p {
