@@ -61,11 +61,11 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-// ナイトモード処理？
+// 画面背景変更
 let modeBtn = document.querySelector('.mode > a');
-const body = document.querySelector('body');
-modeBtn.addEventListener('click', () => {
+const changeMode = () => {
+  const body = document.querySelector('body');
+
   body.classList.toggle('night');
   modeIcon = modeBtn.querySelector('i');
 
@@ -74,4 +74,20 @@ modeBtn.addEventListener('click', () => {
   } else {
     modeBtn.innerHTML = '<i class="fa-regular fa-sun" style="color:#fde24f;"></i>';
   }
+}
+
+// ナイトモード処理？
+const currentDate = new Date();
+const currentTime = currentDate.getHours();
+if (currentTime >= 18) {
+  changeMode();
+}
+
+// 画面背景 切り替え
+modeBtn.addEventListener('click', () => {
+  changeMode();
 });
+
+
+
+
