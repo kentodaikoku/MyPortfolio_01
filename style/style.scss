@@ -434,6 +434,9 @@ html {
           &.javascript::before {
             width: 50%;
           }
+          &.react::before {
+            width: 5%;
+          }
           &.php::before {
             width: 80%;
           }

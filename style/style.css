@@ -347,6 +347,9 @@ html body {
 #main #skill .skill-wrapper .skill-bar .skill-line.javascript::before {
   width: 50%;
 }
+#main #skill .skill-wrapper .skill-bar .skill-line.react::before {
+  width: 5%;
+}
 #main #skill .skill-wrapper .skill-bar .skill-line.php::before {
   width: 80%;
 }
